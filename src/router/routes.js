@@ -3,7 +3,7 @@ const routes = express();
 const controller = require("../controller/users/users");
 const verifyAuthentication = require("../middleware/verifyAuthentication");
 
-routes.get("/", verifyAuthentication, controller.listTasks);
+routes.get("/main", verifyAuthentication, controller.listTasks);
 routes.post("/sign-up", controller.addUser);
 routes.post("/sign-in", controller.loginUser);
 routes.post("/main", verifyAuthentication, controller.addTasks);
