@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const express = require("express");
 const verifyAuthentication = require("./middleware/verifyAuthentication");
 const app = express();

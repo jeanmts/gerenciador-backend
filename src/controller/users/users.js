@@ -86,6 +86,7 @@ const loginUser = async (req, res) => {
     const { senha: _, ...userAuthenticated } = responseQuery.rows[0];
     return res.status(200).json({ usuario: userAuthenticated, token });
   } catch (error) {
+    console.log(error);
     res.status(404).json({ message: "Erro Interno" });
   }
 };
